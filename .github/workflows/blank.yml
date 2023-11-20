@@ -33,4 +33,4 @@ jobs:
           cd libiconv-1.17
           ./configure
           make
-          make test
+          make check
