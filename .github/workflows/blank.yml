@@ -28,6 +28,6 @@ jobs:
 
       - name: make check
         run: |
-          export ASAN_OPTIONS="detect_leaks=0"
+          #export ASAN_OPTIONS="detect_leaks=0"
           cd libiconv-1.17
           make check
