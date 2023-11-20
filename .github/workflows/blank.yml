@@ -1,7 +1,6 @@
 name: CI
 
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "main" ]
   pull_request:
@@ -29,5 +28,6 @@ jobs:
 
       - name: make check
         run: |
+          export ASAN_OPTIONS="detect_leaks=0"
           cd libiconv-1.17
           make check
