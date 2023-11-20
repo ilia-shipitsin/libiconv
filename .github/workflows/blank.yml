@@ -21,8 +21,8 @@ jobs:
           wget https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.17.tar.gz
           tar xvf libiconv-1.17.tar.gz
           cd libiconv-1.17
-          export CFLAGS='-ggdb -fsanitize=address'
-          export LDFLAGS='-fsanitize=address'
+          export CFLAGS='-ggdb -fsanitize=undefined'
+          export LDFLAGS='-fsanitize=undefined'
           ./configure
           make
 
